@@ -5,6 +5,8 @@ require "view/register.php";
 if(isset($_POST["submit"])){
     $validation = new UserValidator($_POST);
     $errors = $validation->validateForm();
+    $object = new User();
+    $object->insertUsersStmt($firstname,$lastname,$email,$username,$password);
 }
 
 

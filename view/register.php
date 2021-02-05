@@ -7,7 +7,7 @@ class UserValidator{
 
     private $data;
     private $errors = [];
-    private static $fields = ["username", "email"];
+    private static $fields = ["username" , "email" ];
 
     public function __construct($post_data){
         $this->data = $post_data;
@@ -22,7 +22,7 @@ class UserValidator{
         }
 
         $this->validateUserName();
-        $this->validateemail();
+        $this->validateEmail();
         return $this->errors;
     }
 
@@ -39,17 +39,17 @@ class UserValidator{
         }
     }
 
-    private function validateemail(){
+     private function validateEmail(){
         $val = trim($this->data['email']);
 
         if(empty($val)){
-            $this->addError('username','username cannot be empty');
+            $this->addError('email','email must be a valid email');
         }else{
             if(!preg_match('/^[a-zA-Z0-9`]{6,12}$/',$val)){
                 $this->addError('email', 'email must be a valid email');
             }
         }
-    }
+    } 
 
 
 
