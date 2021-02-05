@@ -1,6 +1,6 @@
 <?php
 
-
+// connection to mysqi database
 class Db {
     
     private $serverName = "localhost";

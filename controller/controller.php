@@ -2,8 +2,8 @@
 
 require_once "model/models.php";
 
-
-class Test extends Db {
+// get users from database
+class Users extends Db {
 
     public function getUsers(){
         $sql = "SELECT * FROM register";

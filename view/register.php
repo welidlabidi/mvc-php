@@ -3,6 +3,7 @@
 require "controller/controller.php";
 require "controller/user.controller.php";
 
+//validation of username and email
 class UserValidator{
 
     private $data;
